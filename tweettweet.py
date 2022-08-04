@@ -10,12 +10,12 @@ public_tweets = api.home_timeline()
 for tweet in public_tweets:
     print(tweet.text)
 
-# user = api.me()
+user = api.me()
 
 
-# print(user.name)
-# print(user.screen_name)
-# print(user.followers_count)
+print(user.name)
+print(user.screen_name)
+print(user.followers_count)
 
 
 # def limit_handle(cursor):
