@@ -30,8 +30,10 @@ def limit_handle(cursor):
 
 for follower in limit_handle(tweepy.Cursor(api.followers).items()):
     if follower.name == '':
-        print(follower.name)
+        # print(follower.name)
+        follower.follow()
         break
+
 
 
 # Narcissist Bot
