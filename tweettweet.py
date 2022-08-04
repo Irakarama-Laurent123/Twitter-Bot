@@ -18,21 +18,21 @@ print(user.screen_name)
 print(user.followers_count)
 
 
-# def limit_handle(cursor):
-#     try:
-#         while True:
-#             yield cursor.next()
-#     except tweepy.RateLimitError:
-#         time.sleep(1000)
-#
-#
-# # Generous Bot
-#
-# for follower in limit_handle(tweepy.Cursor(api.followers).items()):
-#     if follower.name == '':
-#         print(follower.name)
-#         break
-#
+def limit_handle(cursor):
+    try:
+        while True:
+            yield cursor.next()
+    except tweepy.RateLimitError:
+        time.sleep(1000)
+
+
+# Generous Bot
+
+for follower in limit_handle(tweepy.Cursor(api.followers).items()):
+    if follower.name == '':
+        print(follower.name)
+        break
+
 
 # Narcissist Bot
 
