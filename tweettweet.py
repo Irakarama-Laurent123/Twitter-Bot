@@ -36,14 +36,14 @@ for follower in limit_handle(tweepy.Cursor(api.followers).items()):
 
 # Narcissist Bot
 
-# search_string = 'python'
-# numbersOfTweets = 2
-#
-# for tweet in tweepy.Cursor(api.search, search_string).items(numbersOfTweets):
-#     try:
-#         tweet.favorite()
-#         print('I liked that tweet')
-#     except tweepy.TweepError as e:
-#         print(e.reason)
-#     except StopIteration:
-#         break
+search_string = 'python'
+numbersOfTweets = 2
+
+for tweet in tweepy.Cursor(api.search, search_string).items(numbersOfTweets):
+    try:
+        tweet.favorite()
+        print('I liked that tweet')
+    except tweepy.TweepError as e:
+        print(e.reason)
+    except StopIteration:
+        break
